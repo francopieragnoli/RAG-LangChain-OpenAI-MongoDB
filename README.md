@@ -1,2 +1,21 @@
-# RAG-LangChain-OpenAI-MongoDB
-This project implements a Retrieval-Augmented Generation (RAG) system using LangChain embeddings and MongoDB as a vector database. 
+# RAG with OpenAI, LangChain and MongoDB
+This project implements a Retrieval-Augmented Generation (RAG) system using LangChain embeddings and MongoDB as a vector database. The system processes PDF documents, splits the text into coherent chunks of up to 256 characters, stores them in MongoDB, and retrieves relevant chunks based on a prompt. The retrieved chunks are then sent to the OpenAI API to generate a final, context-aware response.
+
+## Features
+PDF Processing: Extracts text from PDF files and splits it into coherent chunks without interrupting sentences.
+
+Vector Storage: Stores text chunks and their embeddings in MongoDB.
+
+Similarity Search: Finds relevant chunks using cosine similarity.
+
+OpenAI Integration: Generates final responses using the OpenAI API based on retrieved chunks.
+
+Assertiveness Threshold: Filters retrieved chunks based on a similarity threshold.
+
+## Requirements
+Python 3.7+
+MongoDB
+LangChain
+PyPDF2
+OpenAI 
+Python
