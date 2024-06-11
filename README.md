@@ -19,3 +19,11 @@ LangChain
 PyPDF2
 OpenAI 
 Python
+
+## Notes
+### Coherent Text Division:
+The split_text_into_chunks function divides the text into sentences and ensures that each chunk ends in a period, respecting the 256 character limit.
+### Chunk Filtering:
+Only chunks with similarity above the defined assertiveness threshold are concatenated to form the context to be sent to OpenAI.
+### OpenAI Answers:
+If there are no chunks with similarity above the threshold, a default message is returned.
